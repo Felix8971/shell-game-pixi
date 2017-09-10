@@ -156,12 +156,12 @@
         cupContainer[i].x = CUP_DX + CUP_DX*i;
         cupContainer[i].y = CUP_Y;
         cupContainer[i].mousedown = button.touchstart = function(data){
-          console.log("clic on cup "+ i);
+          //console.log("Click on cup "+ i);
           if ( i === ballIndex ){
             //$("#ball"+ballIndex).show();
 
             //$("#startButton").show();
-            msg.text = 'Well done ! Clic the button bellow to play again.';
+            msg.text = 'Well done ! Click the button bellow to play again.';
             button.alpha = 1;
             msg.position.set(0.5*(GAME_WIDTH - msg.width), 360);
             createjs.Tween.get(cup[ballIndex]).to({y:-50}, 1000).call(()=>{
@@ -294,7 +294,7 @@
           if ( idElt === "box"+ballIndex ){
             $("#ball"+ballIndex).show();
             $("#startButton").show();
-            $("#message").text('Well done ! Clic the button bellow to play again.');
+            $("#message").text('Well done ! Click the button bellow to play again.');
             $("#startButton").text('Start');
             gameState = 0;
             //initGame();
