@@ -35,7 +35,6 @@
     createjs.Tween.get(title).to({alpha:1}, 1000).call(handleComplete);
     function handleComplete() {
         //Tween complete
-        alert();
     }
 
 
