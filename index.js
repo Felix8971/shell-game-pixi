@@ -75,10 +75,6 @@
       textBtn.x = 0.5*(button.width - textBtn.width);
       textBtn.y = 0.5*(button.height - textBtn.height);
 
-      // buttonmode+interactive = acts like a button
-      //button.buttonMode = true;
-      //button.interactive = true;
-
 
       button.mousedown = button.touchstart = function(data){
         msg.text = "";
@@ -96,13 +92,11 @@
             duration = 500;
           }*/
 
-          //$("#difficulty").text('Difficulty: '+difficultyLegend[difficulty]);
+          //difficulty").text('Difficulty: '+difficultyLegend[difficulty]);
           //put a ball in a box
           ballIndex = getRandomInt(0,2);
           ball[ballIndex].visible = true;
 
-
-          //$("#ball"+ballIndex).blink({delay: 100});
           createjs.Tween.get(cup[ballIndex]).to({y:-50}, 500)
           .wait(500)
           .to({y:0}, 500)
@@ -128,15 +122,11 @@
               }
               button.visible = false;
               notClickable(button);
-              //button.visible = false;
-              //button.buttonMode = false;
-
               gameState++;
 
             });
 
         }
-
       }
 
 
@@ -158,9 +148,7 @@
         cupContainer[i].mousedown = button.touchstart = function(data){
           //console.log("Click on cup "+ i);
           if ( i === ballIndex ){
-            //$("#ball"+ballIndex).show();
 
-            //$("#startButton").show();
             msg.text = 'Well done ! Click the button bellow to play again.';
             button.alpha = 1;
             msg.position.set(0.5*(GAME_WIDTH - msg.width), 360);
@@ -195,15 +183,6 @@
 
       }
 
-      //cup[1].y = -50;
-      //cup[1].width = 80;
-      //cup[1].scale.set(0.5, 0.5);
-      //cup[1].anchor.x = 0.5;
-      //cup[1].anchor.y = 0.5;
-
-      //stage.removeChild(cup[0]);
-      //ball[1].visible = false;
-
       //Render the stage
       renderer.render(stage);
 
@@ -231,7 +210,6 @@
     function play() {
       //Move the cat 1 pixel to the right each frame
       //cup[0].x += 1;
-
     }
 
     //Set the game's current state to `play`:
