@@ -9,7 +9,7 @@
 
     const GAME_WIDTH = 700, GAME_HEIGTH = 500;
     //Create the renderer
-    var renderer = autoDetectRenderer(GAME_WIDTH, 500);//figures out whether to use the Canvas Drawing API or WebGL to render graphics
+    var renderer = autoDetectRenderer(GAME_WIDTH, GAME_HEIGTH);//figures out whether to use the Canvas Drawing API or WebGL to render graphics
 
     //Add the canvas to the HTML document
     document.body.appendChild(renderer.view);
@@ -264,23 +264,6 @@
         });
 
     }
-
-    var CupClickable = function (element) {
-
-        $(element).click(function (e) {
-          var idElt = this.getAttribute('id');
-          if ( idElt === "box"+ballIndex ){
-            $("#ball"+ballIndex).show();
-            $("#startButton").show();
-            $("#message").text('Well done ! Click the button bellow to play again.');
-            $("#startButton").text('Start');
-            gameState = 0;
-            //initGame();
-          }else{
-            $("#message").text('Oups...the ball is not here !');
-          }
-        });
-    };
 
 
     var clickable = function (element) {
