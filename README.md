@@ -16,6 +16,6 @@ npm install http-server -g
 
 htp-server .
 
-with the browser of your choice go to http://127.0.0.1:8080/ and enjoy
+with the browser of your choice go to http://127.0.0.1:8080/ and enjoy the game
 
 This was a coding challenge and I coded this game in 6 hours.
