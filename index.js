@@ -51,7 +51,7 @@
     var ball = [];
     var button, textBtn;
     var gameState = 0;
-    var nbSwitchMax = 5;
+    var nbSwitchMax = 10;
     var nbSwitch = 0;
     var duration = 400;
     var difficulty = -1;
@@ -163,6 +163,9 @@
           }else{
             msg.text = 'Oups...the ball is not here !';
             msg.position.set(0.5*(GAME_WIDTH - msg.width), 360);
+            createjs.Tween.get(cup[i]).to({y:-50}, 500)
+            .wait(500)
+            .to({y:0}, 500)
           }
         }
 
