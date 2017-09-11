@@ -9,9 +9,13 @@ Just click [here](http://felixdebon.com/shell-game-pixi/index.html) for a live d
 
 # Run locally
 git clone https://github.com/Felix8971/shell-game-pixi.git
+
 cd game-of-shells
+
 npm install http-server -g
+
 htp-server .
+
 with the browser of your choice go to http://127.0.0.1:8080/ and enjoy
 
 This was a coding challenge and I coded this game in 6 hours.
