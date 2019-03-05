@@ -14,7 +14,7 @@ cd game-of-shells
 
 npm install http-server -g
 
-htp-server .
+http-server .
 
 with the browser of your choice go to http://127.0.0.1:8080/ and enjoy the game
 
